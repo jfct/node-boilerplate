@@ -2,6 +2,8 @@
 
 Skeleton for Node.js applications written in TypeScript
 
+## Personal changes for small prototype projects
+Can remove CODE_OF_CONDUCT / CONTRIBUTING / LICENSE / SECURITY files and the wiki folder, Husky might be deleted too for no CI
 
 ## Purpose
 
