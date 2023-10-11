@@ -41,6 +41,8 @@
     "winston": "^3.10.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-conventional": "^17.7.0",
     "@types/cors": "^2.8.13",
     "@types/jest": "^29.5.3",
     "@types/supertest": "^2.0.12",
