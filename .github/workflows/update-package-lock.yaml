@@ -10,18 +10,21 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
       with:
         node-version: 12
         registry-url: https://registry.npmjs.org/
 
     - name: Configure git and update package-lock.json
       run: |
-        git config user.email "template@gmail.com"
-        git config user.name "template"
+        git config user.email "placeholder@gmail.com"
+        git config user.name "Placeholder"
+        git config credential.helper "store --file=$GITHUB_WORKSPACE/.git-credentials"
+        echo "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" > $GITHUB_WORKSPACE/.git-credentials
         npm install --package-lock-only
         git add -f package-lock.json
         if git commit -m "Update package-lock.json"; then

@@ -5,6 +5,8 @@ Skeleton for Node.js applications written in TypeScript
 ## Personal changes for small prototype projects
 Can remove CODE_OF_CONDUCT / CONTRIBUTING / LICENSE / SECURITY files and the wiki folder, Husky might be deleted too for no CI
 
+!!! DONT FORGET TO CHANGE update-package-lock!!!!!
+
 ## Purpose
 
 Our main purpose with this Skeleton is to start server application with node js and typescript.
